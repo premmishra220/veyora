@@ -1,6 +1,7 @@
 import React, { useState, useContext } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
 import { AuthContext } from '../context/AuthContext';
+import axios from 'axios';
 import '../styles/auth.css';
 
 const Register = () => {
@@ -13,20 +14,13 @@ const Register = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const res = await fetch('/api/auth/register', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ name, email, password })
-      });
-      const data = await res.json();
-      if (res.ok) {
-        alert('Registration Successful! Please check your email for the Welcome OTP.');
-        login(data);
-        navigate('/');
-      } else {
-        alert(data.message);
-      }
+      const res = await axios.post('/api/auth/register', { name, email, password });
+      const data = res.data;
+      alert('Registration Successful! Please check your email for the Welcome OTP.');
+      login(data);
+      navigate('/');
     } catch (error) {
+      alert(error.response?.data?.message || 'Registration failed');
       console.error(error);
     }
   };
