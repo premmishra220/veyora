@@ -11,7 +11,7 @@ const sendEmail = async ({ email, subject, message }) => {
     });
 
     const mailOptions = {
-      from: `"ShopNest Support" <${process.env.GMAIL_USER}>`,
+      from: `"Veyora Support" <${process.env.GMAIL_USER}>`,
       to: email,
       subject: subject,
       html: message,

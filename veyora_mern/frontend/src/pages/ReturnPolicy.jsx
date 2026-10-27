@@ -19,7 +19,7 @@ const ReturnPolicy = () => {
       </h2>
       
       <p style={{ marginBottom: '20px' }}>
-        At ShopNest, we proudly stand behind the quality of our merchandise. If for any reason you are completely disastified with your purchase, you may securely initiate a return within 30 days of receiving your order.
+        At Veyora, we proudly stand behind the quality of our merchandise. If for any reason you are completely disastified with your purchase, you may securely initiate a return within 30 days of receiving your order.
       </p>
 
       <h4 style={{ color: '#f97316', marginTop: '25px', marginBottom: '10px' }}>1. Eligibility for Returns</h4>
