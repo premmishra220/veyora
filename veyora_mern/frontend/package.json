@@ -1,7 +1,7 @@
 {
   "name": "frontend",
   "version": "0.1.0",
-  "author": "Shivansh Vasu",
+  "author": "Prem Mishra",
   "private": true,
   "dependencies": {
     "@reduxjs/toolkit": "^2.1.0",
